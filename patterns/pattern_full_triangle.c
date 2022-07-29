@@ -11,12 +11,12 @@ int main(){
         {
             printf("  ");
         }
-       while (n != 2 * i - 1) {
+        while (n != 2 * i - 1) {
         printf("* ");
-        ++n;
-       }
+        ++n;}
        printf("\n");
+       
+       }
+       return 0;
     }
     
-return 0;
-}
