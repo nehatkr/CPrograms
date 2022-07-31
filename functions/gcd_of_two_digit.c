@@ -5,7 +5,7 @@ int findgcd(int num1, int num2);
 int main(){
     int num1, num2, gcd;
     printf("\n\nrecurtion : Find GCDof two number:\n");
-    printf("--------------------------------------\n");
+    
     printf("Enter first number :\n");
     scanf("%d" ,&num1);
     printf("Enter second number :\n");
