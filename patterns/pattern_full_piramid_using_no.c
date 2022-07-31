@@ -3,7 +3,7 @@
 int main(){
     int totalrowNo,rows,space,symbol;
     printf("Enter number of rows: ");
-    scanf("%d",&totalrowNo);
+    scanf("%d" , &totalrowNo);
 
     for ( rows= 1; rows <= totalrowNo; rows++)//for printing the rows.
     {
@@ -13,7 +13,7 @@ int main(){
         }
         for ( symbol = 1; symbol <= ((2 * rows)-1); symbol ++)//for printing the star or numbers.
         {
-            printf("%d " , rows);
+            printf("%d ",rows);
         }
         printf("\n");
         
