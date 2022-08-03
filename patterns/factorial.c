@@ -6,9 +6,8 @@ int main(){
  scanf("%d" , &n);
 for (int i = 1; i <=n; i++)
 {
-    fact = fact * i;
-    printf("factorial of %d is %d\n",n, fact);
+    fact = fact * i;    
 }
-
+printf("factorial of %d is %d\n",n, fact);
     return 0;
 }
