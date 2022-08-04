@@ -18,4 +18,8 @@ int main(){
             numofdigit(n1/10);
         }
         return count;
-}
+}/*
+input=1234
+working...1234/10=123(count is 1 ),123/10(count is 2),12/10(count is 3),1/10(count is 4)..{only quotient will consider}
+so total number in a digit is 4.
+*/
