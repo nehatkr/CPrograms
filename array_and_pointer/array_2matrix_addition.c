@@ -1,59 +1,104 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-
-int first[3][3],second[3][3],sum[3][3];
-int i,j;
-printf("Enter first element of a matrix\n ");
-
-for ( i = 0; i < 3; i++)
+struct matrix
 {
-    for ( j = 0; j < 3; j++)
+    int val[3][3];
+};
+
+struct matrix scanMatrix()
+{
+    struct matrix newMatrix;
+    for (int i = 0; i < 3; i++)
     {
-        scanf("%d",&first[i][j]);
-    }   
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &newMatrix.val[i][j]);
+        }
+    }
+    return newMatrix;
 }
-printf("Enter second element of a matrix\n");
 
-for ( i = 0; i < 3; i++)
+void printMatrix(struct matrix matrix)
 {
-    for ( j = 0; j < 3; j++)
+    for (int i = 0; i < 3; i++)
     {
-        scanf("%d",&second[i][j]);
+        for (int j = 0; j < 3; j++)
+        {
+            printf("\t%d", matrix.val[i][j]);
+        }
+        printf("\n");
     }
 }
-printf("First matrix:-\n");
-for ( i = 0; i< 3; i++)
+
+struct matrix sumMatrix(struct matrix firstmatrix, struct matrix secondmatrix)
 {
-    for ( j = 0; j< 3; j++)
+    struct matrix sumMatrix;
+    for (int i = 0; i < 3; i++)
     {
-        printf("\t%d",first[i][j]);
+        for (int j = 0; j < 3; j++)
+        {
+            sumMatrix.val[i][j] = firstmatrix.val[i][j] + secondmatrix.val[i][j];
+        }
     }
+        return sumMatrix;
+}
+
+int main()
+{
+
+    struct matrix first, second, sum;
+    printf("Enter first element of a matrix\n ");
+
+    first = scanMatrix();
+
+    // for (i = 0; i < 3; i++)
+    // {
+    //     for (j = 0; j < 3; j++)
+    //     {
+    //         scanf("%d", &first[i][j]);
+    //     }
+    // }
+    printf("Enter second element of a matrix\n");
+
+    second = scanMatrix();
+
+    printf("First matrix:-\n");
+    // for (i = 0; i < 3; i++)
+    // {
+    //     for (j = 0; j < 3; j++)
+    //     {
+    //         printf("\t%d", first[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    printMatrix(first);
+
     printf("\n");
-}
 
-printf("\n");
+    printf("second matrix:-\n");
+    // for (i = 0; i < 3; i++)
+    // {
+    //     for (j = 0; j < 3; j++)
+    //     {
+    //         printf("\t%d", second[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    printMatrix(second);
 
-printf("second matrix:-\n");
-for ( i = 0; i< 3; i++)
-{
-    for ( j = 0; j< 3; j++)
-    {
-        printf("\t%d",second[i][j]);
-    }
-    printf("\n");
-}
-printf("Sum of entered matrix:-\n");
+    printf("Sum of entered matrix:-\n");
+    sum = sumMatrix(first, second);
+    printMatrix(sum);
 
-for ( i = 0; i < 3; i++)
-{
-    for ( j = 0; j < 3; j++)
-    {
-        sum[i][j] = first[i][j] + second[i][j];
-        printf("\t%d",sum[i][j]);
-    }
-    printf("\n");
-}
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     for (int j = 0; j < 3; j++)
+    //     {
+    //         sum.val[i][j] = first.val[i][j] + second.val[i][j];
+    //         printf("\t%d", sum.val[i][j]);
+    //     }
+    //     printf("\n");
+    // }
 
     return 0;
 }
