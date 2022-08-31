@@ -1,3 +1,4 @@
+//pointer is used for dynamic memory allocation.
 #include<stdio.h>
 
 int main(){
