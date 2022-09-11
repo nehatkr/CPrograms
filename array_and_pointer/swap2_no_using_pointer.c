@@ -12,7 +12,7 @@ int main()
     temp = *b;
     *b = *a;
     *a = temp;
-    
+
     printf("\nNumbers after swapping\nx = %d\ny = %d", x, y);
 
     return 0;
