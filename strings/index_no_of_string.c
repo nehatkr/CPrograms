@@ -13,5 +13,6 @@ int main()
         printf("The Character at %d Index Position = %c \n", i, str[i]);
         i++;
     }
+    
     return 0;
 }
