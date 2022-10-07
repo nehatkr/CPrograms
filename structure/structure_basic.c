@@ -10,7 +10,7 @@ struct student
 
 int main()
 {
-    struct student Shubham, Ravi, Abhi;
+    struct student Shubham, Ravi, Abhi;  //local variable
     Shubham.id = 45;
     Ravi.id = 35;
     Abhi.id = 65;
