@@ -9,7 +9,7 @@ int func1(int b1){
 
     return myvar + b1;
 }
-int main()
+int main2()
 {
     int b = 56;
     int val = func1(b);
