@@ -11,7 +11,7 @@ int main()
      printf("The content of this file has %s\n",string );
 
     // ****** Writing a file ******
-    ptr = fopen("myfile2.txt", "a");
+    ptr = fopen("myfile2 .txt","a");
     fprintf(ptr, "%s", string);
 
     return 0;
