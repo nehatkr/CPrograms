@@ -11,7 +11,7 @@ int isperfect(int num);
 
 int main(){
     int num;
-    printf('Enter any number:');
+    printf("Enter any number");
     scanf("%d",&num);
 //call isprime() functions
 if(isprime(num)){
