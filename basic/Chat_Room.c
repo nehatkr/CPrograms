@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //character change in to integer
 #include <time.h>
 #include <string.h>
 
@@ -15,9 +15,9 @@ int main()
 
     // Read & update current value of user count
     count_file_read = fopen("user_no.txt", "r");
-    fgets(count, 10, count_file_read);
+    fgets(count, 10, count_file_read); // for reading a file.
     fclose(count_file_read);
-    int current_count = atoi(count);
+    int current_count = atoi(count); // changing the character array or string with integer.
     current_count++;
 
     // Write updated value of user count to file
@@ -25,10 +25,10 @@ int main()
     fprintf(count_file_write, "%d", current_count);
     fclose(count_file_write);
 
-    chat_file = fopen("chatfile.txt", "a");
     do
     {
-        printf("User %d:\t ", current_count);
+
+        printf("User %d:\t ", current_count); // for updating the user num on the consol.
         gets(user_input);
         puts(user_input);
         if (!strcmp(user_input, "exit")) // for comparing two string
@@ -42,11 +42,13 @@ int main()
             {
                 t[strlen(t) - 1] = '\t';
             }
-            fprintf(chat_file, "User %d\t%s%s\n", current_count, t, user_input);
+
+            chat_file = fopen("chatfile.txt", "a");
+            fprintf(chat_file, "%sUser %d\t%s\n", current_count, t, user_input);
+            fclose(chat_file);
         }
 
     } while (1);
 
-    fclose(chat_file);
     return 0;
 }
